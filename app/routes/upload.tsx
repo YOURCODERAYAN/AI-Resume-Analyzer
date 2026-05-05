@@ -151,11 +151,11 @@ const Upload = () => {
                             </div>
                             <div className='form-div'>
                                 <label htmlFor="job-title">Job Title</label>
-                                <input type="text" name='job-title' placeholder='Job Title' id='job-title' />
+                                <input type="text" name='jobTitle' placeholder='Job Title' id='job-title' />
                             </div>
                             <div className='form-div'>
                                 <label htmlFor="job-description">Job-description</label>
-                                <textarea rows={5} name='job-description' placeholder='Job Description' id='job-description' />
+                                <textarea rows={5} name='jobDescription' placeholder='Job Description' id='job-description' />
                             </div>
 
 

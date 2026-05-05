@@ -10,11 +10,15 @@ interface FileUploaderProps{
 
 const FileUploader = ({onFileSelect}:FileUploaderProps) => {
 
+    const[File ,setFile] = useState<File | null>(null)
+
 
      const onDrop = useCallback((acceptedFiles : File[])=> {
     // Do something with the files
 
     const file  = acceptedFiles[0] || null
+
+    setFile(file);
 
     onFileSelect?.(file)
   }, [onFileSelect])
@@ -28,7 +32,12 @@ const FileUploader = ({onFileSelect}:FileUploaderProps) => {
     maxSize:maxFileSize,
   })
 
-  const file = acceptedFiles[0] || null;
+    const handleRemoveFile = (e:React.MouseEvent<HTMLButtonElement>)=>{
+        e.stopPropagation();
+        setFile(null);
+        onFileSelect?.(null)
+    }
+  
 
 
   return (
@@ -40,24 +49,21 @@ const FileUploader = ({onFileSelect}:FileUploaderProps) => {
         
         {
 
-            file ? (
+            File ? (
                 <div className='uploader-selected-file' onClick={(e)=> e.stopPropagation()}>
                         <div className='flex items-center space-x-3'>
                     <img src="/images/pdf.png" alt="pdf"  className="size-10"/>
                     <div>
                          <p className='text-sm font-medium text-gray-700 truncate max-w-xs'>
-                        {file.name}
+                        {File.name}
                     </p>
                     <p className='text-sm text-gray-500'>
-                        {formatSize(file.size)}
+                        {formatSize(File.size)}
                     </p>
                     </div>
 
                 </div>
-                <button className='p-2 cursor-pointer' onClick={(e)=>{
-
-                    onFileSelect?.(null)
-                }}>
+                <button className='p-2 cursor-pointer' onClick={handleRemoveFile}>
                     <img src="/icons/cross.svg" alt="remove" className='w-4 h-4' />
                 </button>
 
