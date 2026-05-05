@@ -1,5 +1,6 @@
 import React from 'react';
 import ScoreGauge from '~/components/ScoreGauge'
+import ScoreBadge from './ScoreBadge';
 
 
 // without creating manually we are creating a component and use it afterwards
@@ -13,6 +14,8 @@ const Category=({title , score}:{title:string , score:number})=>{
            <div className="category">
             <div className="flex flex-row items-center  justify-center">
                 <p className="text-2xl">{title}</p>
+
+                <ScoreBadge score={score} />
             </div>
                 <p className="text-2xl">
                     <span className={textColor}>{score}</span>/100
