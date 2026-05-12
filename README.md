@@ -63,9 +63,6 @@ Each section gets a score out of 100 and a badge — **Good**, **Good Start**, o
 ### 🖼️ Resume Preview
 The uploaded PDF is converted to an image and displayed inline next to the AI feedback — no download needed to cross-reference improvements.
 
-### 📋 Application Tracker Dashboard
-Every submission is saved via Puter KV store to your personal dashboard. The home page shows all past analyses as cards — company name, role, and score — so you can track progress across multiple applications over time.
-
 ### 🐳 Docker Support
 A `Dockerfile` is included for containerized deployment anywhere beyond Vercel.
 
@@ -153,7 +150,7 @@ User Opens App
 └──────────────────────────────────────────┘
            │
            ▼
-  Saved to puter.kv → Appears on Home Dashboard next visit
+  Saved to puter.kv
 ```
 
 ---
@@ -184,7 +181,7 @@ AI-Resume-Analyzer/
 │   │
 │   ├── routes/
 │   │   ├── auth.tsx           # /auth  — Puter login / logout screen
-│   │   ├── home.tsx           # /home  — Application tracker dashboard
+│   │   ├── home.tsx           # /home  — Application  dashboard
 │   │   ├── upload.tsx         # /upload — Resume + JD submission form
 │   │   └── resume.tsx         # /resume — AI feedback + resume preview
 │   │
@@ -283,13 +280,8 @@ docker run -p 3000:3000 resumind
 - [x] GPT-4o-mini AI resume analysis
 - [x] ATS score + section badges (Tone · Content · Structure · Skills)
 - [x] PDF to image resume preview
-- [x] Application tracker dashboard via Puter KV
+- [x] Data Saved via Puter KV
 - [x] Vercel deployment + Docker support
-- [ ] Dedicated logout button in navbar
-- [ ] Resume improvement diff view across versions
-- [ ] Multiple saved resumes per job application
-- [ ] Export full feedback as a PDF report
-- [ ] Shareable public result links
 
 ---
 
@@ -297,9 +289,9 @@ docker run -p 3000:3000 resumind
 
 ```bash
 git checkout -b feature/your-feature
+git add .
 git commit -m "feat: describe your change"
 git push origin feature/your-feature
-# Then open a Pull Request
 ```
 
 ---
