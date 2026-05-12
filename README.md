@@ -75,7 +75,7 @@ A `Dockerfile` is included for containerized deployment anywhere beyond Vercel.
     <td align="center" width="50%">
       <img src="./screenshots/home.webp" alt="Home — Application Tracker" width="100%" />
       <br/><b>🏠 Home — Application Tracker Dashboard</b><br/>
-      <sub>Past submissions with company, role, and ATS score at a glance</sub>
+      <sub>Some resumes examples with company, role, and ATS score at a glance</sub>
     </td>
     <td align="center" width="50%">
       <img src="./screenshots/uploading-form.webp" alt="Upload Form" width="100%" />
@@ -113,45 +113,11 @@ A `Dockerfile` is included for containerized deployment anywhere beyond Vercel.
 
 ## 🔄 How It Works
 
-```
-User Opens App
-      │
-      ▼
-┌─────────────────────┐
-│   Puter.js Auth     │  ← Sign up / Log in  (/auth)
-└──────────┬──────────┘
-           │ Authenticated → redirect
-           ▼
-┌─────────────────────┐
-│  Home Dashboard     │  ← Past submissions loaded from puter.kv  (/home)
-└──────────┬──────────┘
-           │ "Upload Resume" →
-           ▼
-┌─────────────────────┐
-│   Upload Form       │  ← Company · Role · JD · PDF drag & drop  (/upload)
-└──────────┬──────────┘
-           │ "Analyze Resume" →
-           ▼
-  ┌────────────────────────────────────────┐
-  │  puter.fs  →  Upload PDF to cloud      │
-  │  pdftoimg  →  Convert PDF to image     │
-  │  puter.ai  →  GPT-4o-mini inference   │
-  └────────────────────┬───────────────────┘
-                       │
-                       ▼
-┌──────────────────────────────────────────┐
-│   Results Page  (/resume)                │
-│  ┌───────────────┐  ┌───────────────────┐│
-│  │ Resume Image  │  │ Overall ATS Score ││
-│  │  (PDF→img)    │  │ Tone · Content    ││
-│  │               │  │ Structure · Skills││
-│  │               │  │ Improvement Tips  ││
-│  └───────────────┘  └───────────────────┘│
-└──────────────────────────────────────────┘
-           │
-           ▼
-  Saved to puter.kv
-```
+<div align="center">
+  <img src="./screenshots/flowchart.png" width="50%"/>
+
+</div>
+
 
 ---
 
