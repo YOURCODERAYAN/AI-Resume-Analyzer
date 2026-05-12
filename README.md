@@ -76,36 +76,36 @@ A `Dockerfile` is included for containerized deployment anywhere beyond Vercel.
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="./screenshots/home.png" alt="Home — Application Tracker" width="100%" />
+      <img src="./screenshots/home.webp" alt="Home — Application Tracker" width="100%" />
       <br/><b>🏠 Home — Application Tracker Dashboard</b><br/>
       <sub>Past submissions with company, role, and ATS score at a glance</sub>
     </td>
     <td align="center" width="50%">
-      <img src="./screenshots/upload.png" alt="Upload Form" width="100%" />
+      <img src="./screenshots/uploading-form.webp" alt="Upload Form" width="100%" />
       <br/><b>📤 Upload — Resume Submission Form</b><br/>
       <sub>Company name · Job title · Job description · Drag & drop PDF</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="./screenshots/analyzing.png" alt="Analyzing State" width="100%" />
+      <img src="./screenshots/uploading-file-to.webp" alt="Analyzing State" width="100%" />
       <br/><b>⏳ Analyzing — AI Processing State</b><br/>
       <sub>File uploads to Puter FS, PDF converts to image, AI analysis runs</sub>
     </td>
     <td align="center" width="50%">
-      <img src="./screenshots/results.png" alt="Results Page" width="100%" />
+      <img src="./screenshots/image-6.webp" alt="Results Page" width="100%" />
       <br/><b>📊 Results — Resume Review Panel</b><br/>
       <sub>Rendered resume on the left, ATS score + section scores on the right</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="./screenshots/improvements.png" alt="Improvement Tips" width="100%" />
+      <img src="./screenshots/image-7.webp" alt="Improvement Tips" width="100%" />
       <br/><b>🔧 Improvements — Accordion Detail View</b><br/>
       <sub>Expandable sections with specific, actionable tips per score category</sub>
     </td>
     <td align="center" width="50%">
-      <img src="./screenshots/auth.png" alt="Auth Page" width="100%" />
+      <img src="./screenshots/image-9.webp" alt="Auth Page" width="100%" />
       <br/><b>🔐 Auth — Login / Logout via Puter</b><br/>
       <sub>One-click Puter auth — session persists across visits</sub>
     </td>
